@@ -1,3 +1,12 @@
 # `Weather AI Agent`
 
-<img width="1600" height="1278" alt="image" src="https://github.com/user-attachments/assets/120a060d-f750-4db9-aa54-fda38feb22f5" />
+```
+☀️ Chat with my bot about the weather — by text or voice.
+
+I remember past conversations so you can compare cities easily.
+```
+
+<a href="https://t.me/automate_vixbot" target="_blank">
+  <img src="https://github.com/user-attachments/assets/1772dcc6-16d2-404c-938c-33d636ecf020" 
+       alt="Weather Bot">
+</a>
