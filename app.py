@@ -79,7 +79,7 @@ WEBHOOK_URL = f"{PUBLIC_BASE_URL}{WEBHOOK_PATH}"
 GROQ_PRIMARY = "groq/llama3-70b-8192"
 GROQ_FALLBACKS = [
     "groq/llama3-8b-8192",
-    "groq/mixtral-8x7b-32768",
+    "groq/gemma2-9b-it",
 ]
 DEFAULT_MAX_TOKENS = 256
 
