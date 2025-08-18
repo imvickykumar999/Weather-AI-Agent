@@ -48,10 +48,11 @@ except Exception as e:
 # ----------------------------
 # Model Constants (Groq-first)
 # ----------------------------
+
 GROQ_PRIMARY = "groq/llama3-70b-8192"
 GROQ_FALLBACKS = [
     "groq/llama3-8b-8192",
-    "groq/mixtral-8x7b-32768",
+    "groq/gemma2-9b-it",
 ]
 
 # ADK/LiteLlm uses OpenAI-style params; keep outputs short to reduce TPM.
