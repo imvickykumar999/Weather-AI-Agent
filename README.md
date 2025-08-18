@@ -1,4 +1,4 @@
-# `Weather AI Agent`
+## `Weather AI Agent` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/imvickykumar999/a0bdb98039c629581b87e5f94ffe8bdd/weather-report.ipynb)
 
 ```
 ☀️ Chat with my bot about the weather — by text or voice.
