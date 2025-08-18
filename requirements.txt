@@ -1,0 +1,17 @@
+# --- Core Web ---
+flask==3.0.3
+requests==2.32.3
+python-dotenv==1.0.1
+
+# --- Groq + LLM ---
+groq>=0.9.0
+litellm>=1.43.0
+
+# --- Google ADK stack (adjust to your installed version) ---
+google-adk  # if it's pip-installable, otherwise install from your local package
+
+# --- Weather tool (your own module) ---
+# WeatherAPI  # if this is a pip package; if it's your local file WeatherAPI.py, you don't need to list it
+
+# --- Optional ---
+aiohttp>=3.10.5      # used internally by LiteLLM for async HTTP
