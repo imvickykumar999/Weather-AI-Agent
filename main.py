@@ -49,7 +49,7 @@ except Exception as e:
 # Model Constants (Groq-first)
 # ----------------------------
 
-GROQ_PRIMARY = "groq/llama3-70b-8192"
+GROQ_PRIMARY = "groq/llama-3.3-70b-versatile"
 GROQ_FALLBACKS = [
     "groq/llama3-8b-8192",
     "groq/gemma2-9b-it",
