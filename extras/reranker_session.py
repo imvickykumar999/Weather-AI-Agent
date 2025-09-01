@@ -62,7 +62,7 @@ os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
 # ----------------------------
 # Model Constants (Groq-first)
 # ----------------------------
-GROQ_PRIMARY = "groq/llama3-70b-8192"
+GROQ_PRIMARY = "groq/llama-3.3-70b-versatile"
 GROQ_FALLBACKS = [
     "groq/llama3-8b-8192",
     "groq/mixtral-8x7b-32768",
@@ -304,4 +304,3 @@ if __name__ == "__main__":
         asyncio.run(main())
     except Exception as e:
         print(f"An error occurred: {e}")
-
