@@ -76,11 +76,13 @@ WEBHOOK_URL = f"{PUBLIC_BASE_URL}{WEBHOOK_PATH}"
 # ----------------------------
 # Models & Agent (Groq-first)
 # ----------------------------
-GROQ_PRIMARY = "groq/llama3-70b-8192"
+
+GROQ_PRIMARY = "groq/llama-3.3-70b-versatile"
 GROQ_FALLBACKS = [
     "groq/llama3-8b-8192",
-    "groq/gemma2-9b-it",
+    "groq/gemma2-9b-it",   # ✅ valid replacement
 ]
+
 DEFAULT_MAX_TOKENS = 256
 
 def make_model(model_name: str) -> LiteLlm:
@@ -334,6 +336,15 @@ def telegram_webhook():
             logging.exception("Voice handling failed")
             send_message(chat_id, "Sorry, I couldn't process that voice note.")
             return jsonify({"status": "ok"}), 200
+
+    if "sticker" in message:
+        sticker_info = message["sticker"]
+        emoji = sticker_info.get("emoji", "")
+        if emoji:
+            reply = asyncio.run(ask_agent_async(emoji, user_id=user_id, session_id=session_id))
+            send_message(chat_id, reply)
+            return jsonify({"status": "ok"}), 200
+        return jsonify({"status": "ignored"}), 200
 
     # Ignore other types
     return jsonify({"status": "ignored"}), 200
